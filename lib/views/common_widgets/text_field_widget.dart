@@ -14,14 +14,13 @@ class TextFieldWidget extends StatelessWidget {
     return Container(
       width: width,
       height: height,
-      color: Colors.grey,
       child: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: TextField(
-            style: textStyle,
-            decoration: InputDecoration(
-              hintText: hintText ?? "",
+        child: TextField(
+          style: textStyle,
+          decoration: InputDecoration(
+            hintText: hintText ?? "",
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(12),
             ),
           ),
         ),
