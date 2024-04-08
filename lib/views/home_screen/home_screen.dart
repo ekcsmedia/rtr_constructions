@@ -24,15 +24,15 @@ class _HomeScreenState extends State<HomeScreen> {
                     width: 100,
                     height: 50,
                     color: Colors.green,
-                    child: Center(
+                    child: const Center(
                       child: Text("Logo"),
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 50,
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 100,
                   height: 70,
                   child: Column(
@@ -44,10 +44,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 50,
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 100,
                   height: 70,
                   child: Column(
@@ -59,10 +59,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 50,
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 100,
                   height: 70,
                   child: Column(
@@ -74,10 +74,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 50,
                 ),
-                Expanded(
+                const Expanded(
                   child: TextField(
                     decoration: InputDecoration(
                       hintText: "Customer",
@@ -86,10 +86,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 50,
                 ),
-                SizedBox(width: 30, height: 50, child: Icon(Icons.logout)),
+                const SizedBox(width: 30, height: 50, child: Icon(Icons.logout)),
               ],
             ),
           ),
@@ -104,7 +104,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   Flexible(
                     fit: FlexFit.tight,
                     flex: 1,
-                    child: ListView(children: <Widget>[
+                    child: ListView(children: const <Widget>[
                       ListTile(title: Text("CUSTOMERS")),
                       ListTile(title: Text("SETTINGS")),
                       ListTile(title: Text("ABOUT US")),
@@ -114,8 +114,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     fit: FlexFit.tight,
                     flex: 6,
                     child: Container(
-                      child: Center(child: Text('Content')),
                       color: Colors.black26,
+                      child: const Center(child: Text('Content')),
                     ),
                   ),
                 ],
