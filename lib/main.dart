@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:sattva_rtr_construction_split_wise/views/auth_screens/login_home_screen.dart';
+import 'package:sattva_rtr_construction_split_wise/views/home_screen/home_screen.dart';
 import 'package:sattva_rtr_construction_split_wise/views/splash_screen.dart';
 
 void main() {
@@ -43,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
     super.initState();
     Timer(const Duration(seconds: 1), () {
       Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => const LoginHome()));
+          MaterialPageRoute(builder: (context) => const HomeScreen()));
     });
   }
 
