@@ -108,7 +108,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           Navigator.of(context).push(
                               MaterialPageRoute(builder: (context) => const LoginInput())
                           );                        },
-                      icon: Icon(Icons.logout))),
+                      icon: const Icon(Icons.logout))),
               ],
             ),
           ),
@@ -129,7 +129,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         Padding(
                           padding: const EdgeInsets.all(4.0),
                           child: Material(
-                            child: ListTile(title: Text("CUSTOMERS", style: TextStyle(
+                            child: ListTile(title: const Text("CUSTOMERS", style: TextStyle(
                               fontWeight: FontWeight.bold,
                             ),),
                             tileColor: Colors.blue[700],),
@@ -138,14 +138,14 @@ class _HomeScreenState extends State<HomeScreen> {
                         Padding(
                           padding: const EdgeInsets.all(4.0),
                           child: Material(
-                            child: ListTile(title: Text("SETTINGS"),
+                            child: ListTile(title: const Text("SETTINGS"),
                               tileColor: Colors.blue[500],),
                           ),
                         ),
                         Padding(
                           padding: const EdgeInsets.all(4.0),
                           child: Material(
-                            child: ListTile(title: Text("ABOUT US"),
+                            child: ListTile(title: const Text("ABOUT US"),
                               tileColor: Colors.blue[500],),
                           ),
                         ),
@@ -171,16 +171,16 @@ class _HomeScreenState extends State<HomeScreen> {
                                   height: 50,
                                   width: 50,
                                 ),
-                                title: Text("Admin_Test"),
-                                subtitle: Text("admin"),
-                                trailing: Column(
+                                title: const Text("Admin_Test"),
+                                subtitle: const Text("admin"),
+                                trailing: const Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Text("\u{20B9} 3000"),
                                     Text("You Got")
                                   ],
                                 ),
-                                contentPadding: EdgeInsets.all(8),
+                                contentPadding: const EdgeInsets.all(8),
                                 tileColor: Colors.white,
                               ),
                             ),
