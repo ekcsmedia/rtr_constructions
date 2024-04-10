@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../auth_screens/login_input_screen.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -12,9 +14,11 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.purple,
-          title: SizedBox(
-            height: 80,
+          automaticallyImplyLeading: false,
+          // backgroundColor: Colors.blue[800],
+          title: Container(
+            height: 200,
+            color: Colors.white,
             child: Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -23,73 +27,88 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Container(
                     width: 100,
                     height: 50,
-                    color: Colors.green,
+                    color: Colors.blue,
                     child: const Center(
                       child: Text("Logo"),
                     ),
                   ),
                 ),
                 const SizedBox(
-                  width: 50,
+                  width: 20,
                 ),
                 const SizedBox(
-                  width: 100,
+                  width: 400,
                   height: 70,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    mainAxisSize: MainAxisSize.min,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Text("Name"),
-                      Text("Phone"),
+                      Text("Santhosh Kumar S"),
+                      Text("+91 8925450309"),
                     ],
                   ),
                 ),
                 const SizedBox(
-                  width: 50,
+                  width: 20,
                 ),
                 const SizedBox(
-                  width: 100,
+                  width: 200,
                   height: 70,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    mainAxisSize: MainAxisSize.min,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Text("Rs.100.0"),
-                      Text("You Gave"),
+                      Text("You Gave",style: TextStyle(
+                        color: Colors.redAccent
+                      ),),
+                      Text("\u{20B9} 100.0",style: TextStyle(
+                          color: Colors.redAccent
+                      ),),
                     ],
                   ),
                 ),
                 const SizedBox(
-                  width: 50,
+                  width: 20,
                 ),
                 const SizedBox(
-                  width: 100,
+                  width: 200,
                   height: 70,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    mainAxisSize: MainAxisSize.min,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Text("Rs.500.0"),
-                      Text("You Got"),
+                      Text("You Got",style: TextStyle(
+                          color: Colors.greenAccent
+                      ),),
+                      Text("\u{20B9} 500.0",style: TextStyle(
+                          color: Colors.greenAccent
+                      ),),
+
                     ],
                   ),
                 ),
                 const SizedBox(
-                  width: 50,
+                  width: 20,
                 ),
-                const Expanded(
-                  child: TextField(
-                    decoration: InputDecoration(
-                      hintText: "Customer",
-                      prefixIcon: Icon(Icons.search),
-                      border: InputBorder.none,
+                 Expanded(
+                  child: Container(
+                    color: Colors.blue[200],
+                    child: const TextField(
+                      decoration: InputDecoration(
+                        hintText: "37 Customers",
+                        prefixIcon: Icon(Icons.search),
+                        border: InputBorder.none,
+                      ),
                     ),
                   ),
                 ),
                 const SizedBox(
-                  width: 50,
+                  width: 20,
                 ),
-                const SizedBox(width: 30, height: 50, child: Icon(Icons.logout)),
+                SizedBox(width: 30, height: 50,
+                    child: IconButton(
+                        onPressed: () {
+                          Navigator.of(context).push(
+                              MaterialPageRoute(builder: (context) => const LoginInput())
+                          );                        },
+                      icon: Icon(Icons.logout))),
               ],
             ),
           ),
@@ -104,18 +123,78 @@ class _HomeScreenState extends State<HomeScreen> {
                   Flexible(
                     fit: FlexFit.tight,
                     flex: 1,
-                    child: ListView(children: const <Widget>[
-                      ListTile(title: Text("CUSTOMERS")),
-                      ListTile(title: Text("SETTINGS")),
-                      ListTile(title: Text("ABOUT US")),
-                    ]),
+                    child: Container(
+                      color: Colors.blue[100],
+                      child: ListView(children: <Widget>[
+                        Padding(
+                          padding: const EdgeInsets.all(4.0),
+                          child: Material(
+                            child: ListTile(title: Text("CUSTOMERS", style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                            ),),
+                            tileColor: Colors.blue[700],),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(4.0),
+                          child: Material(
+                            child: ListTile(title: Text("SETTINGS"),
+                              tileColor: Colors.blue[500],),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(4.0),
+                          child: Material(
+                            child: ListTile(title: Text("ABOUT US"),
+                              tileColor: Colors.blue[500],),
+                          ),
+                        ),
+                      ]),
+                    ),
                   ),
                   Flexible(
                     fit: FlexFit.tight,
-                    flex: 6,
+                    flex: 4,
                     child: Container(
-                      color: Colors.black26,
-                      child: const Center(child: Text('Content')),
+                      color: Colors.blue[50],
+                      child: Padding(
+                        padding: const EdgeInsets.all(4.0),
+                        child: ListView.builder(
+                          shrinkWrap: true,
+                          itemBuilder: (context, i) {
+                          return Padding(
+                            padding: const EdgeInsets.only(top: 5.0,left: 8.0,right: 8.0),
+                            child: Material(
+                              child: ListTile(
+                                leading: Container(
+                                  color: Colors.blue,
+                                  height: 50,
+                                  width: 50,
+                                ),
+                                title: Text("Admin_Test"),
+                                subtitle: Text("admin"),
+                                trailing: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text("\u{20B9} 3000"),
+                                    Text("You Got")
+                                  ],
+                                ),
+                                contentPadding: EdgeInsets.all(8),
+                                tileColor: Colors.white,
+                              ),
+                            ),
+                          );
+                        }, itemCount: 30,),
+                      ),
+                    ),
+                  ),
+                  Flexible(
+                    fit: FlexFit.tight,
+                    flex: 2,
+                    child: Container(
+                      color: Colors.blue[100],
+                      child: const Center(child: Text('Transactions Summary')),
                     ),
                   ),
                 ],

@@ -3,6 +3,7 @@ import 'package:sattva_rtr_construction_split_wise/views/common_widgets/button_w
 import 'package:sattva_rtr_construction_split_wise/views/common_widgets/logo_container.dart';
 
 import '../common_widgets/text_field_widget.dart';
+import '../home_screen/home_screen.dart';
 
 class LoginInput extends StatefulWidget {
   const LoginInput({super.key});
@@ -153,10 +154,15 @@ class _LoginInputState extends State<LoginInput> {
                           )
                         ],
                       ),
-                      child: const ButtonWidget(
+                      child:  ButtonWidget(
                         data: "LOGIN",
                         width: 80,
                         height: 40,
+                        onTap: () {
+                          Navigator.of(context).push(
+                              MaterialPageRoute(builder: (context) => const HomeScreen())
+                          );
+                        },
                       ),
                     ),
                     Visibility(

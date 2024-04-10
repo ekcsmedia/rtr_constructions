@@ -44,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
     super.initState();
     Timer(const Duration(seconds: 1), () {
       Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => const HomeScreen()));
+          MaterialPageRoute(builder: (context) => const LoginHome()));
     });
   }
 
