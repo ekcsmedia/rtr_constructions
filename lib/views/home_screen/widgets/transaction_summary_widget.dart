@@ -41,7 +41,7 @@ class TransactionSummaryWidget extends StatelessWidget {
                         decoration: BoxDecoration(
                             color: Colors.purple[500],
                             border: Border.all(color: Colors.blue)),
-                        child: Center(
+                        child: const Center(
                           child: Text("ENTRIES"),
                         ),
                       ),
@@ -51,7 +51,7 @@ class TransactionSummaryWidget extends StatelessWidget {
                       fit: FlexFit.tight,
                       child: Container(
                         color: Colors.red,
-                        child: Center(
+                        child: const Center(
                           child: Text("YOU GAVE"),
                         ),
                       ),
@@ -61,7 +61,7 @@ class TransactionSummaryWidget extends StatelessWidget {
                       fit: FlexFit.tight,
                       child: Container(
                         color: Colors.green,
-                        child: Center(
+                        child: const Center(
                           child: Text("YOU GOT"),
                         ),
                       ),
@@ -88,8 +88,8 @@ class TransactionSummaryWidget extends StatelessWidget {
                               decoration: BoxDecoration(
                                   color: Colors.grey[500],
                                   border: Border.all(color: Colors.blue)),
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
+                              child: const Padding(
+                                padding: EdgeInsets.all(8.0),
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -112,7 +112,7 @@ class TransactionSummaryWidget extends StatelessWidget {
                               decoration: BoxDecoration(
                                   color: Colors.red[200],
                                   border: Border.all(color: Colors.blue)),
-                              child: Center(
+                              child: const Center(
                                 child: Text(
                                   "\u{20B9} 1000.0",
                                   style: TextStyle(color: Colors.red),
@@ -130,7 +130,7 @@ class TransactionSummaryWidget extends StatelessWidget {
                               decoration: BoxDecoration(
                                   color: Colors.green[200],
                                   border: Border.all(color: Colors.blue)),
-                              child: Center(
+                              child: const Center(
                                 child: Text(
                                   "\u{20B9} 3000.0",
                                   style: TextStyle(color: Colors.green),
@@ -151,27 +151,27 @@ class TransactionSummaryWidget extends StatelessWidget {
               children: [
                 ElevatedButton(
                   onPressed: () {},
-                  child: Text(
+                  style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
+                  child: const Text(
                     "YOU GAVE \u{20B9} ",
                     style: TextStyle(color: Colors.white),
                   ),
-                  style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 20,
                 ),
                 ElevatedButton(
                   onPressed: () {},
-                  child: Text(
+                  style:
+                      ElevatedButton.styleFrom(backgroundColor: Colors.green),
+                  child: const Text(
                     "YOU GOT \u{20B9} ",
                     style: TextStyle(color: Colors.white),
                   ),
-                  style:
-                      ElevatedButton.styleFrom(backgroundColor: Colors.green),
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             )
           ],
