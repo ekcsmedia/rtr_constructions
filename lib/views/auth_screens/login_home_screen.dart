@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:sattva_rtr_construction_split_wise/views/auth_screens/login_input_screen.dart';
 import 'package:sattva_rtr_construction_split_wise/views/common_widgets/button_widget.dart';
 
+import '../my_dart_data/my_dart_data.dart';
+
 class LoginHome extends StatelessWidget {
   const LoginHome({super.key});
 
@@ -56,7 +58,22 @@ class LoginHome extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.all(16.0),
                   child: Text("By logging in you agree to our terms and conditions"),
-                )
+                ),
+                ButtonWidget(
+                  width: 250,
+                  height: 40,
+                  data: "MY DART DATA SCREEN",
+                  textStyle: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16
+                  ),
+                  isLogo: false,
+                  onTap:() {
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => MyDartDataScreen())
+                    );
+                  },
+                ),
               ],
             ),
           )
