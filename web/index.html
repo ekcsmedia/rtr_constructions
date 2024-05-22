@@ -55,5 +55,31 @@
       });
     });
   </script>
+
+  <script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.1/firebase-app.js'
+
+    // If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
+    import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.12.1/firebase-analytics.js'
+
+    // Add Firebase products that you want to use
+    import { getAuth } from 'https://www.gstatic.com/firebasejs/10.12.1/firebase-auth.js'
+    import { getFirestore } from 'https://www.gstatic.com/firebasejs/10.12.1/firebase-firestore.js'
+
+  const firebaseConfig = {
+  apiKey: "AIzaSyCbj-zW9a5t5FLCdRyxCa0YzGjP2CT402E",
+  authDomain: "sattva-10f71.firebaseapp.com",
+  databaseURL: "https://sattva-10f71-default-rtdb.firebaseio.com",
+  projectId: "sattva-10f71",
+  storageBucket: "sattva-10f71.appspot.com",
+  messagingSenderId: "804948939829",
+  appId: "1:804948939829:web:2e454093b56af404260d7c",
+  measurementId: "G-X6MD7HH6EC"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+
+ </script>
 </body>
 </html>
