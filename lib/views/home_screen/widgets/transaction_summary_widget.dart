@@ -13,11 +13,13 @@ class TransactionSummaryWidget extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Expanded(
-                child: Container(
-                  color: Colors.blue[200],
-                  child: const TextField(
+              padding: const EdgeInsets.only(left: 8.0),
+              child: Container(
+                height: 40,
+                color: Colors.blue[200],
+                child: const Padding(
+                  padding: EdgeInsets.only(bottom: 4.0),
+                  child: TextField(
                     decoration: InputDecoration(
                       hintText: "2 Entries",
                       prefixIcon: Icon(Icons.search),
